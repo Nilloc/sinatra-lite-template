@@ -1,14 +1,14 @@
 !!!
 %html
   %head
-    %title= @title || SiteConfig.title
+    %title= @title || "Title"
     %link{:href => '/main.css', :rel => 'stylesheet', :type => 'text/css'}
   %body
     #container
       #header
         #logo
           %h1
-            %a{:href => '/'}= SiteConfig.title
+            %a{:href => '/'}= @title || "Title"
       #content= yield
       #footer
-        %p#legal= "&copy; #{Time.now.strftime('%Y')} #{SiteConfig.author}"
+        %p#legal= "&copy; #{Time.now.strftime('%Y')} #{@author || 'Collin Reisdorf'}"

@@ -1,10 +1,6 @@
 require 'rubygems'
 require 'sinatra'
-require 'environment'
-
-configure do
-  set :views, "#{File.dirname(__FILE__)}/views"
-end
+require 'haml'
 
 error do
   e = request.env['sinatra.error']
@@ -18,5 +14,5 @@ end
 
 # root page
 get '/' do
-  haml :root
+  haml :index
 end
