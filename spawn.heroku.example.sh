@@ -1,6 +1,6 @@
 #!/bin/bash
 
-APPNAME = 'myapp'
+APPNAME = 'Testerino'
 
 # Install Heroku gem
 sudo gem install heroku
